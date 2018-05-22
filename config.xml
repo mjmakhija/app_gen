@@ -1,0 +1,26 @@
+<configurations>
+
+	<config>
+		<database>
+			<url></url>
+			<name></name>
+			<username></username>
+			<password></password>
+		</database>
+		<truncate>
+			<table name="table1"/>
+			<table name="table2"/>
+		</truncate>
+		<clear>
+			<table name="table1" column="col1"></table>
+			<table name="table2" column="col1">
+				<id>1</id>
+				<id>2</id>
+			</table>
+		</clear>
+		<output-file-name>blank</output-file-name>
+	</config>
+
+	<mysql-bin-path></mysql-bin-path>
+	
+</configurations>
