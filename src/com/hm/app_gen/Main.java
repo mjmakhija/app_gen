@@ -1,4 +1,4 @@
-package app_gen;
+package com.hm.app_gen;
 
 import com.hm.app_gen.config.Configurations;
 

@@ -1,4 +1,4 @@
-package app_gen;
+package com.hm.app_gen;
 
 import java.io.IOException;
 import java.util.logging.ConsoleHandler;
