@@ -37,7 +37,7 @@ public class ExportHelper
 				createNewDatabase(config.getDatabase().getUrl(),
 						config.getDatabase().getUsername(),
 						config.getDatabase().getPassword(),
-						"for_dump");
+						GV.TEMP_DB_NAME);
 			}
 			catch (ClassNotFoundException ex)
 			{
@@ -49,7 +49,7 @@ public class ExportHelper
 			}
 
 			//Import dump
-			importDump(configurations.getMysqlBinPath(), "for_dump", config.getDatabase().getUsername(), config.getDatabase().getPassword(), GV.TEMP_DIR + "/temp");
+			importDump(configurations.getMysqlBinPath(), GV.TEMP_DB_NAME, config.getDatabase().getUsername(), config.getDatabase().getPassword(), GV.TEMP_DIR + "/temp");
 
 			StringBuilder sql = new StringBuilder();
 			sql.append("SET FOREIGN_KEY_CHECKS=0;");
@@ -89,7 +89,7 @@ public class ExportHelper
 						config.getDatabase().getUrl(),
 						config.getDatabase().getUsername(),
 						config.getDatabase().getPassword(),
-						config.getDatabase().getName());
+						GV.TEMP_DB_NAME);
 
 				Statement statement = connection.createStatement();
 				String[] sqls = sql.toString().split(";");
@@ -110,7 +110,7 @@ public class ExportHelper
 
 			//Create dump
 			createDump(configurations.getMysqlBinPath(),
-					config.getDatabase().getName(),
+					GV.TEMP_DB_NAME,
 					config.getDatabase().getUsername(),
 					config.getDatabase().getPassword(),
 					config.getOutputFileName());
@@ -120,7 +120,7 @@ public class ExportHelper
 				dropDatabase(config.getDatabase().getUrl(),
 						config.getDatabase().getUsername(),
 						config.getDatabase().getPassword(),
-						"for_dump");
+						GV.TEMP_DB_NAME);
 			}
 			catch (ClassNotFoundException ex)
 			{
