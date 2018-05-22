@@ -1,6 +1,6 @@
 package com.hm.app_gen.config;
 
-import app_gen.LoggerWrapper;
+import com.hm.app_gen.LoggerWrapper;
 import java.io.File;
 import java.util.List;
 import java.util.logging.Level;
