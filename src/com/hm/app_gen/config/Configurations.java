@@ -39,7 +39,7 @@ public class Configurations
 			try
 			{
 				filePath = filePath == null || filePath.isEmpty() ? "config.xml" : filePath;
-				File file = new File("config.xml");
+				File file = new File(filePath);
 				JAXBContext jaxbContext = JAXBContext.newInstance(Configurations.class);
 
 				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();

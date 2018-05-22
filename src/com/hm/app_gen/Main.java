@@ -7,8 +7,10 @@ public class Main
 
 	public static void main(String[] args)
 	{
+		String path = args[0];
+		System.out.println("Passed arg is " + path);
 
-		ExportHelper eh = new ExportHelper(Configurations.getInstance(args[0]));
+		ExportHelper eh = new ExportHelper(Configurations.getInstance(path));
 		eh.export();
 
 	}
